@@ -1,0 +1,18 @@
+#Line-Up project specification:
+
+The task is to create a simple javascript widget that lists upcoming events in London. 
+
+There are only a few requirements:
+
+- The user must be able to filter for events happing today
+- The user must be able to filter for events happening in the next 7 days
+- Only display events happening in London.
+- AngularJS must be used to build the app.
+
+To get event data for the app, use our API, the documentation for which is at http://docs.lineupnow.com/. The access key for your account is d95e605e18384209b386773c5468b15e
+
+It's up to you to present the event data as you see fit however we’re not too concerned about the styling. For an example of how we have done it previously, see http://www.london24.com/what-s-on#/
+
+Once you've completed the task, push the code up to github. Ideally it would be great if you could host the project somewhere and send us a link to it.
+
+Good luck!
