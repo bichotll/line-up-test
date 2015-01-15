@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name androidLineupApp
+ * @name angularLineupApp
  * @description
- * # androidLineupApp
+ * # angularLineupApp
  *
  * Main module of the application.
  */
 angular
-  .module('androidLineupApp', [
+  .module('angularLineupApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -23,9 +23,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/category/:category?/when/:when?', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
