@@ -2,22 +2,23 @@
 
 /**
  * @ngdoc service
- * @name androidLineupApp.eventFactory
+ * @name angularLineupApp.eventFactory
  * @description
  * # eventFactory
- * Factory in the androidLineupApp.
+ * Factory in the angularLineupApp.
  */
-angular.module('androidLineupApp')
-  .factory('eventFactory', function () {
-    // Service logic
-    // ...
+angular.module('angularLineupApp')
+        .factory('eventFactory', function ($http, configConstant) {
+            var urlBase = configConstant.api.url + '/event';
+            var dataFactory = {};
 
-    var meaningOfLife = 42;
+            dataFactory.getEvents = function (params) {
+                var data = angular.extend({}, params, configConstant.predefined.eventFactoryData);
+                data['api_key'] = configConstant.api.key;
+                return $http.get(urlBase, {
+                    params: data
+                });
+            };
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+            return dataFactory;
+        });

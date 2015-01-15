@@ -6,4 +6,13 @@
     <li><a ng-href="#category/{{category}}/when/today" >Today</a></li>
     <li><a ng-href="#category/{{category}}/when/this-week">This week</a></li>
 </ul>
-<line-event></line-event>
+
+<div ng-repeat="event in events">
+    <div ng-if="$index % 3 == 0">
+        <div class="row">
+            <line-event ng-attr-line-event='events[$index+0]' ng-if='events[$index + 0]' class='col-xs-6 col-md-4' ></line-event>
+            <line-event ng-attr-line-event='events[$index+1]' ng-if='events[$index + 1]' class='col-xs-6 col-md-4' ></line-event>
+            <line-event ng-attr-line-event='events[$index+2]' ng-if='events[$index + 2]' class='col-xs-6 col-md-4' ></line-event>
+        </div>
+    </div>
+</div>
