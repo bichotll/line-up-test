@@ -5,8 +5,8 @@ The task is to create a simple javascript widget that lists upcoming events in L
 There are only a few requirements:
 
 ```
-- The user must be able to filter for events happing today
-- The user must be able to filter for events happening in the next 7 days
+x The user must be able to filter for events happing today
+x The user must be able to filter for events happening in the next 7 days
 x Only display events happening in London.
 x AngularJS must be used to build the app.
 ```

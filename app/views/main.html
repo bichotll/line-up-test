@@ -1,11 +1,13 @@
 <ul class="nav nav-pills ">
     <li><a ng-href="#category/all/when/{{when}}">All</a></li>
-    <li><a ng-href="#category/arts-and-culture/when/{{when}}">Arts & Culture</a></li>
+    <li><a ng-href="#category/music/when/{{when}}">Music</a></li>
 </ul>
 <ul class="nav nav-pills">
     <li><a ng-href="#category/{{category}}/when/today" >Today</a></li>
     <li><a ng-href="#category/{{category}}/when/this-week">This week</a></li>
 </ul>
+
+<div ng-if="status" class="alert alert-warning" ><strong>Wow!</strong> {{status}}</div>
 
 <div ng-repeat="event in events">
     <div ng-if="$index % 3 == 0">
