@@ -15,8 +15,10 @@ angular.module('angularLineupApp')
             dataFactory.getEvents = function (params) {
                 var data = angular.extend({}, params, configConstant.predefined.eventFactoryData);
                 data['api_key'] = configConstant.api.key;
-                return $http.get(urlBase, {
-                    params: data
+                data['callback'] = 'JSON_CALLBACK';
+                return $http.jsonp(urlBase, {
+                    params: data,
+                    isArray: true
                 });
             };
 
